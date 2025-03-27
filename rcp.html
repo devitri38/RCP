@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kawaii Recipe Book</title>
+    <link rel="stylesheet" href="Recipe.css">
+</head>
+<body>
+    <h1>🍰 Kawaii Recipe Book 🍓</h1>
+    <p id="sapaan">Welcome to our cute recipe web 👧🤞</p>
+    
+    <input type="text" id="searchBar" onkeyup="searchRecipe()" placeholder="Search for a recipe..." />
+    
+    <div class="container">
+        <h1>What do you wanna cook?🤤</h1>
+        <div class="recipe-grid">
+            <div class="recipe-card" onclick="showRecipe('strawberry')">
+                <img src="https://i.pinimg.com/474x/d7/54/01/d7540134072f98f55234dbf6f14e497b.jpg" alt="Strawberry Shortcake">
+                <h2>Strawberry Shortcake</h2>
+            </div>
+            <div class="recipe-card" onclick="showRecipe('donut')">
+                <img src="https://i.pinimg.com/474x/9c/40/31/9c4031e407d38298eeb3733b21a241f4.jpg" alt="Kawaii Donut">
+                <h2>Kawaii Donut</h2>
+            </div>
+            <div class="recipe-card" onclick="showRecipe('bubbletea')">
+                <img src="https://i.pinimg.com/474x/63/f4/fb/63f4fb04984e840945706c6a823f5079.jpg" alt="Bubble Tea">
+                <h2>Bubble Tea</h2>
+            </div>
+        </div>
+    </div>
+    
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="recipeTitle"></h2>
+            <p id="recipeDetails"></p>
+        </div>
+    </div>
+    
+    <script src="Recipe.js"></script>
+</body>
+</html>
